@@ -17,7 +17,7 @@ export function LoginForm() {
         <CardHeader>
             <CardTitle className="text-2xl">Login</CardTitle>
             <CardDescription>
-            Enter your email below to login to your account
+            Coloque sua senha e email abaixo
             </CardDescription>
         </CardHeader>
         <CardContent>
@@ -33,9 +33,9 @@ export function LoginForm() {
             </div>
             <div className="grid gap-2">
                 <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Senha</Label>
                 <Link href="#" className="ml-auto inline-block text-sm underline">
-                    Forgot your password?
+                    Esqueceu sua Senha?
                 </Link>
                 </div>
                 <Input id="password" type="password" required />
@@ -44,13 +44,13 @@ export function LoginForm() {
                 Login
             </Button>
             <Button variant="outline" className="w-full">
-                Login with Google
+                Login com sua conta Google
             </Button>
             </div>
             <div className="mt-4 text-center text-sm">
-            Don&apos;t have an account?{" "}
+            Não tem conta ainda?{" "}
             <Link href="#" className="underline">
-                Sign up
+                click aqui
             </Link>
             </div>
         </CardContent>
