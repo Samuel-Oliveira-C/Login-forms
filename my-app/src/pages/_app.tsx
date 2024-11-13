@@ -4,6 +4,8 @@ import { LoginForm } from "./components/LoginForm";
 
 export default function App() {
   return(
-    <LoginForm />
+    <section className="w-screen mt-32 flex justify-center bg-slate-700">
+      <LoginForm />
+    </section>
   )
 }

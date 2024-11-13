@@ -10,8 +10,15 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useCallback, useState } from "react"
 
 export function LoginForm() {
+    // States
+    const[email,setEmail] = useState("");
+    const[senha,setSenha] = useState("");
+    // useCallbacks
+    const cbSetEmail = useCallback((text:React.ChangeEvent<HTMLInputElement>) => setEmail(text.target.value),[]);
+    const cbSetSenha = useCallback((text:React.ChangeEvent<HTMLInputElement>) => setSenha(text.target.value) , [])
     return (
         <Card className="mx-auto max-w-sm">
         <CardHeader>
@@ -28,6 +35,8 @@ export function LoginForm() {
                 id="email"
                 type="email"
                 placeholder="m@example.com"
+                value={email}
+                onChange={(key)=> cbSetEmail(key)}
                 required
                 />
             </div>
@@ -38,7 +47,11 @@ export function LoginForm() {
                     Esqueceu sua Senha?
                 </Link>
                 </div>
-                <Input id="password" type="password" required />
+                <Input id="password" 
+                    type="password" required 
+                    value={senha}
+                    onChange={(key) => cbSetSenha(key)}
+                    />
             </div>
             <Button type="submit" className="w-full">
                 Login
